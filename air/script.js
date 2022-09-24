@@ -28,7 +28,7 @@ const errorLabel = document.querySelector("label[for='error-msg");
 const componentsEle = document.querySelectorAll(".component-val");
 
 const appId = "08a396b19f8d847e32ca331fbd66aa53"
-const link = "http://api.openweathermap.org/data/2.5/air_pollution"
+const link = "https://api.openweathermap.org/data/2.5/air_pollution"
 
 const getUserLocation = () => {
     if (navigator.geolocation) {
