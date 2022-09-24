@@ -16,8 +16,6 @@ map.locate({ setView: true })
         console.log(e);
         alert("Location access has been denied.");
     });
-
-// L.Control.geocoder().addTo(map);
 // end of code for map
 
 // code for fetching data
