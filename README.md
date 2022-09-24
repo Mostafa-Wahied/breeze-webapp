@@ -1,6 +1,6 @@
 # Breeze Weather & Air Quality WebApp
 
-You can click [here](https://mostafa-wahied.github.io/Breeze-webapp/) to see the website live
+You can click [here](https://mostafa-wahied.github.io/index.html) to see the website live
 
 
 ## Description
