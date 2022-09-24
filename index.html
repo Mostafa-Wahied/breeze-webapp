@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/landing/style.css" rel="stylesheet">
+    <script src="/landing/script.js" defer></script>
+</head>
+
+<body>
+
+
+
+    <section class="main_container container-fluid d-flex">
+        <!-- <video class="video" src="./media/background.mp4" autoplay loop muted></video>
+        <div class="overlay"></div> -->
+        <img class="bg-img" src="/images/1.jpg" alt="">
+
+        <div id="hero-container"
+            class="container d-flex row justify-content-center align-content-center align-items-center text-center m-auto">
+
+            <div id="hero" class="container-fluid row align-items-center">
+
+                <!-- Navbar -->
+                <div class="container mx-5">
+                    <nav id="navbar" class="navbar navbar-expand-lg bg-light mx-auto">
+                        <div class="container-fluid">
+                            <a id="navbar-brand" class="navbar-brand" href="/index.html">Breeze</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page"
+                                            href="/index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/weather.html">Weather</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/air.html">Air Quality</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end of Navbar -->
+
+                <div class="btn-container col-6">
+                    <div class="container mx-auto">
+                        <div class="d-flex flex-column ms-5">
+                            <h1 id="hero-h1" class="hero-text text-start ">Weather forecast and air quality checker in one place</h1>
+                            <p id="hero-p" class="hero-text text-start">Choose one of two options to check the weather
+                                in
+                                any city in the world or get information about the air quality and pollution in your
+                                location</p>
+                        </div>
+                        <div class="d-flex flex-column p-3 mx-auto just">
+                            <a href="/weather.html" class="href"><button type="button"
+                                    class="col main-btn btn btn-primary justify-content-center my-2 mx-auto">
+                                    Weather</button></a>
+                            <a href="/air.html" class="href"><button type="button"
+                                    class="col main-btn btn btn-primary justify-content-center my-2 mx-auto">Air
+                                    Quality</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div>
+                        <img src="/images/landing.png" class="landing-img img-fluid" alt="forecast image">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2bf40af9ca.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

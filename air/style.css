@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.root {
+    padding: 2vw;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #213764, #295089, #2688d7, #00a7ff);
+    color: #fff;
+    min-height: 100vh;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* color: black; */
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.take-span {
+    color: #406672a9;
+}
+
+.note-span {
+    color: #6ba7baad;
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #fff;
+}
+
+#navbar-brand {
+    font-size: 1.5em;
+    color: rgba(91, 215, 203, 0.81);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.navbar-nav li a {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.73);
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.nav-item a.active {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.681);
+    padding-bottom: 5%;
+    color: rgb(73, 217, 203);
+    font-weight: 550;
+}
+
+
+.navbar-nav {
+    --bs-nav-link-padding-y: 0;
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: transparent !important;
+}
+
+.navbar-nav>li {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.navbar.navbar-light .nav-item .nav-link:hover {
+    color: rgb(88, 93, 237);
+    /* padding-bottom: 5% !important; */
+    /* border-bottom: 2px solid rgb(88, 93, 237)!important; */
+}
+/* end of Navbar */
+
+.bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.main_container {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    /* position: relative; */
+    z-index: -1;
+    /* flex-direction: column; */
+}
+
+#hero-container {
+    /* object-position: center; */
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#hero {
+    background-color: #61616186;
+    width: 80vw;
+    min-width: 80%;
+    height: 75vh;
+    min-height: 80%;
+    z-index: 2;
+    color: white;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+#map {
+    z-index: 3;
+    width: 35vw;
+    height: 60vh;
+}
+
+.air-info {
+    color: #e5e5e5;
+    max-width: 80vw;
+    max-height: 70vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.heading {
+    text-align: center;
+    color: #e5e5e5;
+    font-size: 0.9vw;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.sub-heading {
+    text-align: center;
+    color: #e5e5e5;
+    font-size: 0.9vw;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.loc-input {
+    border: none;
+    font-size: 0.8rem;
+    padding: 0.4em;
+    border-radius: 6px;
+    margin: 0.5em;
+    width: 12vw;
+    flex-wrap: nowrap;
+}
+
+.loc-input:active {
+    border: rgb(226, 132, 119);
+}
+
+.loc-input:invalid {
+    border: 1px solid red;
+}
+
+.search-btn {
+    padding: 0.1em 0.6em;
+    background-color: rgb(6, 135, 122);
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: #e5e5e5;
+    margin: 0.4em;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-row {
+    align-items: center;
+    justify-content: center;
+    width: 16vw;
+}
+
+.search-btn:hover {
+    background-color: rgb(5, 106, 96);
+}
+
+.air-quality,
+.arr,
+.air-quality-status {
+    font-size: 1vw;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+.table {
+    color: #e5e5e5;
+    font-size: 0.7vw;
+
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: rgb(19, 18, 18);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#rectangle {
+    font-size: 0.6vw;
+    justify-content: center;
+    text-align: center;
+    margin: 0.2em;
+    padding-top: 0.9em;
+    padding-bottom: 3em;
+    height: 9vh;
+    width: 9vw;
+    background: rgba(59, 61, 60, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(88, 90, 74, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#sub-rectangle {
+    margin-top: 1.5em;
+    font-size: 1vw;
+}
+
+.air-status {
+    font-size: 0.8vw;
+}
+
+#arrow {
+    padding-bottom: 5%;
+    font-size: 1.2vw;
+    color: #e5e5e5;
+}
+
+.air-quality {
+    color: #e5e5e5;
+}
+
+th {
+    font-weight: normal;
+}

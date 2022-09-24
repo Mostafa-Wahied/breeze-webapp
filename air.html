@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Noto+Sans&family=Roboto&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Air Quality</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/air/style.css" rel="stylesheet">
+    <script src="/air/script.js" defer></script>
+</head>
+
+<body>
+    <section class="main_container container-fluid d-flex">
+        <img class="bg-img" src="/images/2.jpg" alt="">
+
+        <div id="hero-container" class="container-fluid row align-items-center mx-auto">
+            <!-- Hero -->
+            <div id="hero" class="container-fluid align-items-center mx-auto">
+
+                <!-- Navbar -->
+                <div class="navbar-container container-fluid mx-5">
+                    <nav id="navbar" class="navbar navbar-expand-lg bg-light mx-auto">
+                        <div class="container-fluid">
+                            <a id="navbar-brand" class="navbar-brand" href="/index.html">Breeze</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/weather.html">Weather</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/air.html">Air Quality</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end of Navbar -->
+
+                <div class="container-fluid mx-auto">
+                    <div class="container d-flex mx-auto">
+                        <div class="col-5">
+                            <label for="error-msg" style="color: red;"></label><br>
+                            <input type="number" name="lat" placeholder="Longitude" step="0.0001" id="longitude"
+                                class="loc-input">
+                            <input type="number" name="lat" placeholder="Latitude" step="0.0001" id="latitude"
+                                class="loc-input">
+
+                            <div class="search-row row mx-auto">
+                                <button class="search-btn justify-content-center">Search</button>
+                            </div>
+
+                            <div class="air-info container">
+
+                                <div id="rectangle" class="rectangle mx-auto rounded">
+                                    <h4 class="heading">Air Quality Index:</h4>
+                                    <div class="air-status">
+                                        <span class="air-quality">...</span>
+                                        <svg id="arrow" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 1024 1024" height="1em" width="2em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z">
+                                            </path>
+                                        </svg>
+                                        <span class="air-quality-status">...</span>
+                                    </div>
+                                </div>
+
+                                <div class="component-container">
+                                    <div id="sub-rectangle" class="rectangle mx-auto rounded text-start">
+                                        <h3 class="sub-heading text-start">Current Pollutants:</h3>
+                                    </div>
+                                    <!-- Table for data -->
+                                    <table class="table table-striped table-hover text-start">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Carbon Monoxide:</th>
+                                                <th scope="col" class="component-val" data-comp="co"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">Nitrogen Monoxide:</th>
+                                                <th scope="col" class="component-val" data-comp="no"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Nitrogen Dioxide:</th>
+                                                <th scope="col" class="component-val" data-comp="no2"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Ozone:</th>
+                                                <th scope="col" class="component-val" data-comp="o3"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Sulphur Dioxide:</th>
+                                                <th scope="col" class="component-val" data-comp="so2"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Fine particles matter:</th>
+                                                <th scope="col" class="component-val" data-comp="pm2_5"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Coarse particle matter:</th>
+                                                <th scope="col" class="component-val" data-comp="pm10"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Amonia:</th>
+                                                <th scope="col" class="component-val" data-comp="nh3"></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Map -->
+                        <div class="col-7 d-flex justify-content-center mx-auto align-items-center">
+                            <div id='map' class=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2bf40af9ca.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
