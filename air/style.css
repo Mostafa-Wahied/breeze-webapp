@@ -137,6 +137,7 @@ body {
     z-index: 3;
     width: 35vw;
     height: 60vh;
+    max-height: 600px;
 }
 
 .air-info {
