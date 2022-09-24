@@ -70,7 +70,7 @@ const setValuesOfAir = airData => {
             break
         case 2:
             airStat = "Fair"
-            color = "rgb(15, 134, 25)"
+            color = "rgb(15, 180, 25)"
             break
         case 3:
             airStat = "Moderate"
