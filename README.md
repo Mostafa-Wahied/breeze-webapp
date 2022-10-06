@@ -38,4 +38,3 @@ A webapp with a sleek design that allows you to check for the weather for any ci
 JavaScript
  #### External scripts
  Use variables, if statements, loops, at least one form of collections, functions/call back, and events
-# mostafa-wahied.github.io
