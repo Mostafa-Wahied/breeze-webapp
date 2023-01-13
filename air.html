@@ -17,10 +17,12 @@
     <title>Air Quality</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/air/style.css" rel="stylesheet">
-    <link href="/files/leaflet.css" rel="stylesheet">
+    <link href="/static/air.css" rel="stylesheet">
+    <link href="/static/leaflet.css" rel="stylesheet">
 
-    <script src="/air/script.js" defer></script>
+    <script src="/static/air.js" defer></script>
+    <script src="/static/script.js" defer></script>
+    <script src="/static/leaflet.js" defer></script>
 </head>
 
 <body>
@@ -47,10 +49,10 @@
                                         <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/weather/weather.html">Weather</a>
+                                        <a class="nav-link" href="/weather.html">Weather</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/air/air.html">Air Quality</a>
+                                        <a class="nav-link" href="/air.html">Air Quality</a>
                                     </li>
                                 </ul>
                             </div>
@@ -149,9 +151,8 @@
     </section>
 
     <!-- Scripts -->
-    <script src="/files/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script> -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 

@@ -53,7 +53,7 @@ const getAirQuality = async (lat, lon) => {
     });
     const airData = await rawData.json();
 
-    console.log(airData);
+    // console.log(airData);
     setValuesOfAir(airData)
     setCompononetsOfAir(airData)
 }
